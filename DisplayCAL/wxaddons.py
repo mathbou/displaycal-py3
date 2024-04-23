@@ -9,7 +9,7 @@ from DisplayCAL.colormath import specialpow
 from DisplayCAL.wxfixes import wx, GenButton, PlateButton, get_dialogs
 
 import wx.grid
-from DisplayCAL.lib.agw.gradientbutton import GradientButton
+from wx.lib.agw.gradientbutton import GradientButton
 from DisplayCAL import floatspin
 
 

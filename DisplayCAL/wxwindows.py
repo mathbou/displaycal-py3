@@ -92,9 +92,9 @@ from DisplayCAL.wxfixes import (
     get_dialogs,
     set_maxsize,
 )
-from DisplayCAL.lib.agw import labelbook, pygauge
-from DisplayCAL.lib.agw.gradientbutton import GradientButton, CLICK, HOVER
-from DisplayCAL.lib.agw.fourwaysplitter import (
+from wx.lib.agw import labelbook, pygauge
+from wx.lib.agw.gradientbutton import GradientButton, CLICK, HOVER
+from wx.lib.agw.fourwaysplitter import (
     _TOLERANCE,
     FLAG_CHANGED,
     FLAG_PRESSED,
@@ -3456,7 +3456,15 @@ class FlatShadedButton(GradientButton):
     ):
         self.dpiscale = getcfg("app.dpi") / get_default_dpi()
         GradientButton.__init__(
-            self, parent, id, bitmap, label, pos, size, style, validator, name
+            self, parent=parent,
+            id=id,
+            bitmap=bitmap,
+            label=label,
+            pos=pos,
+            size=size,
+            style=style,
+            validator=validator,
+            name=name
         )
         self._bgcolour = bgcolour  # Original bgcolour
         self._fgcolour = fgcolour  # Original fgcolour
@@ -3720,7 +3728,16 @@ class BorderGradientButton(GradientButton):
         self.use_sierra_style = sys.platform == "darwin"
         self._enabled = True
         GradientButton.__init__(
-            self, parent, id, bitmap, label, pos, size, style, validator, name
+            self,
+            parent=parent,
+            id=id,
+            bitmap=bitmap,
+            label=label,
+            pos=pos,
+            size=size,
+            style=style,
+            validator=validator,
+            name=name
         )
         self.SetFont(adjust_font_size_for_gcdc(self.GetFont()))
         self._bitmapdisabled = self._bitmap

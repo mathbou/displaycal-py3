@@ -13,9 +13,9 @@ elif sys.platform == "darwin":
     from platform import mac_ver
 
 from DisplayCAL.wxaddons import wx
-from DisplayCAL.lib.agw import labelbook
-from DisplayCAL.lib.agw.fmresources import *
-from DisplayCAL.lib.agw.pygauge import PyGauge
+from wx.lib.agw import labelbook
+from wx.lib.agw.fmresources import *
+from wx.lib.agw.pygauge import PyGauge
 
 from DisplayCAL.config import (
     get_data_path,
